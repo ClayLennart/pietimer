@@ -97,7 +97,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                     var seconds = Math.ceil(this.current_value/DEFAULT_VALUE * this.settings.seconds);
                     if(this.pieSeconds !== seconds){
                         this.pieSeconds = seconds;
-                        $('#'+this.settings.elementID).html(this.pieSeconds);
+                        $('#'+this.settings.elementID).text(this.pieSeconds);
                     }
                 }
 
@@ -174,7 +174,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     };
 
     $.fn.pietimer = function (method) {
-
         if (typeof method === 'object' || ! method) {
             return create_timer.apply(this, arguments);
         } else {
